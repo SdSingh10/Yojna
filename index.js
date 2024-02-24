@@ -25,8 +25,11 @@ app.get("/logout",(req,res)=>{
     username="user";
     res.redirect("/login");
 })
-app.get("/profile",(req,res)=>{
-    res.render("profile.ejs");
+// app.get("/profile",(req,res)=>{
+//     res.render("profile.ejs");
+// })
+app.get("/schemes",(req,res)=>{
+    res.render("schemes.ejs");
 })
 app.get("/notifications",(req,res)=>{
     res.render("notification.ejs");
@@ -47,6 +50,9 @@ app.get("/",(req,res)=>{
 })
 app.get("/reset",(req,res)=>{
     res.render("setpass.ejs");
+})
+app.get("/profile",(req,res)=>{
+    res.render("reportpage.ejs");
 })
 
 
