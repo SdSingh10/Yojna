@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&display=swap');
 *{
     margin : 0px;
     padding: 0px;
@@ -19,6 +20,7 @@
   }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 :root {
   --primary: #fff;
   --secondary: #179fd9;
@@ -30,7 +32,7 @@
   --shadow: 0px 2px 8px 0px var(--secondary-light);
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -60,7 +62,10 @@ li {
 /* LOGO */
 .logo {
   font-size: 35px;
-  font-family:'Times New Roman', Times, serif;
+  /* font-family:'Times New Roman', Times, serif; */
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
   color: #f7fae3;
   padding-left: 70px;
 }
@@ -368,39 +373,59 @@ input[type=checkbox] {
 {
     font-size: 20px;
     font-family:Arial, Helvetica, sans-serif;
-    color: #3E2723;
+    color:darkslategray;
     font-weight:700;
     padding: 20px;
     width: 75%;
     margin: auto;
 }
 .maps{
-    width:100%;
-    border: 2px solid black;
+  width:100%;
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: #47539273;
+  margin-bottom: 30px;
+}
+input[type="submit"] {
+background-color: #c8bf6d; /* Darker green color on hover */
+color: white;
+border-radius: 20px;
+}
+input[type="submit"]:hover {
+background-color: #ead686; /* Darker green color on hover */
+}
+.chatInput{
+text-align: center;
+margin-top: 40px;
 }
 .chatInput input {
-  color: black;
-  font-size: 14px;
-  padding: 6px 10px;
+color: black;
+font-size: 14px;
+padding: 6px 10px;
+text-align: center;
+width: 70%;
+border-radius: 20px;
 }
+form
 .chatBox {
-  overflow-y: scroll;
-  max-height: 600px;
-  padding: 50px;
+overflow-y: scroll;
+max-height: 900px;
+padding: 50px;
+border-radius: 20px;
 }
 .chat{
-  color: black;
-  text-align: center;
-  font-size:2rem ;
-
+color: black;
+text-align: center;
+font-size:2rem ;
+margin-bottom: 20px;
 }
 .chatMsg {
-  text-align: right;
-  margin: 4px 10px;
-  padding: 8px 12px;
-  border-radius: 20px;
-  background-color: bisque;
-  color: black;
+text-align: right;
+margin: 4px 10px;
+padding: 8px 12px;
+border-radius: 20px;
+background-color: bisque;
+color: black;
 }
 .about_us_box{
     height: 800px;
