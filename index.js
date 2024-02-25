@@ -102,7 +102,7 @@ app.post("/feedback",(req,res)=>{
 
 
 app.get("/",(req,res)=>{
-    res.render("yojna.ejs");
+    res.render("landing.ejs");
 })
 app.get("/reset",(req,res)=>{
     res.render("setpass.ejs");

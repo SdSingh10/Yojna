@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style/landing.css"/>
+        <link rel="stylesheet" href="style/styles100.css"/>
+        <link rel="stylesheet" href="style/gallery100.css"/>
+        <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/a076do5399.js"></script>
+  <!-- <link rel="stylesheet" href="style/styles.css" /> -->
+  <!-- <title>Yojna</title> -->
+  <link rel="icon" href="yojnanewlogo.png" type="image/x-icon">
+  <link href='https://unpg.com/boxicons@2.1.4/css/boxicons.min.css' 
+  rel='stylesheet'>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    </head>
+    <body>
+        <div class="landing">
+          <nav class="navbar">
+            <!-- LOGO -->
+            <h1 class="logo">YOJNA</h1>
+        
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+        
+              <!-- USING CHECKBOX HACK -->
+              <input type="checkbox" id="checkbox_toggle" />
+              <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        
+              <!-- NAVIGATION MENUS -->
+              <div class="menu">
+        
+                <li><a href="/">Home</a></li>
+                <li><a href="/#aboutus">About us</a></li>
+        
+                <li class="services">
+                  <a href="/">Schemes</a>
+        
+                  <!-- DROPDOWN MENU -->
+                  <ul class="dropdown">
+                    <li><a href="/schemes">All schemes </a></li>
+                    <li><a href="/#myschemes">My schemes</a></li>
+                  </ul>
+                </li>
+                <li><a href="/">Contact</a></li>
+              </div>
+            </ul>
+            <div class="profile-dropdown">
+              <div onclick="toggle()" class="profile-dropdown-btn">
+                <div class="profile-img">
+                  <i class="fa-solid fa-circle"></i>
+                </div>
+        
+                <span
+                  >
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </div>
+        
+              <ul class="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                  <a href="/profile">
+                    <i class="fa-regular fa-user"></i>
+                    Edit Profile
+                  </a>
+                </li>
+        
+                <li class="profile-dropdown-list-item">
+                  <a href="/notification">
+                    <i class="fa-regular fa-envelope"></i>
+                    Notifications
+                  </a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                  <a href="/feedback">
+                    <i class="fa-regular fa-envelope"></i>
+                    Feedback
+                  </a>
+                </li>
+                <!-- <li class="profile-dropdown-list-item">
+                  <a href="/settings">
+                    <i class="fa-solid fa-sliders"></i>
+                    Settings
+                  </a> -->
+                <!-- </li> -->
+                <li class="profile-dropdown-list-item">
+                  <a href="/logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Log out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <script>
+            let profileDropdownList = document.querySelector(".profile-dropdown-list");
+        let btn = document.querySelector(".profile-dropdown-btn");
+        
+        let classList = profileDropdownList.classList;
+        
+        const toggle = () => classList.toggle("active");
+        
+        window.addEventListener("click", function (e) {
+          if (!btn.contains(e.target)) classList.remove("active");
+        });
+          </script>
+          <center>
+            <div id="landing" class="landing_text">
+              Unlocking opportunities, simplifying access
+            </div>
+          </center>
+        </div>
+        <div class="myschemes" id="myschemes">
+          <div class="s1">
+              <h1></h1>
+              <p></p>
+          </div>
+          <div class="s2">
+              <h1></h1>
+              <p></p>
+          </div>
+          <div class="s3">
+              <h1></h1>
+              <p></p>
+          </div>
+          <div class="s4">
+              <h1></h1>
+              <p></p>
+          </div>
+      </div>
+  </div>
+  <div class="maps">
+    <div class="chatBox">
+      <div class="chatMsg">hello this is sample chat message</div>
+    </div>
+    <div class="chatInput">
+      <input type="text">
+      <input type="submit">
+    </div>
+  </div>
+  <div class="gallery">
+    <ul>
+      <li>
+          <a href="">
+              <figure>
+                  <img src='sheme1.jpg' alt="no image">
+                  <figcaption>GHARIB NAWAZ EMPLOYMENT SCHEME</figcaption>
+              </figure>
+          </a>
+      </li>
+      <li>
+          <a href="">
+              <figure>
+                  <img src='scheme2.png'>
+                  <figcaption>SWANIRBHAR NAARI</figcaption>
+              </figure>
+          </a>
+      </li>
+      <li>
+          <a href="">
+              <figure>
+                  <img src='scheme3.webp'>
+                  <figcaption>HEALTH SCHEME</figcaption>
+              </figure>
+          </a>
+      </li>
+      <li>
+          <a href="">
+              <figure>
+                  <img src='scheme4.jpg'>
+                  <figcaption>GOVERNMENT INITIATIVES FOR SCHOOLS</figcaption>
+              </figure>
+          </a>
+      </li>
+      <li>
+          <a href="">
+              <figure>
+                  <img src='sheme5.jpg'>
+                  <figcaption>PM-KISAN</figcaption>
+              </figure>
+          </a>
+      </li>
+      <li>
+          <a href="">
+              <figure>
+                  <img src='scheme6.jpg'>
+                  <figcaption>eNAM</figcaption>
+              </figure>
+          </a>
+      </li>
+  </ul>
+  </div>
+  <div class="about_us_box" id="aboutus">
+    <div class="about_us">
+      <h1>W h y&nbsp;&nbsp; C h o o s e</h1>
+                      <h1> Y o j n a ?</h1>
+                      <p>
+                          Elevate your travels with TripITista. Seamlessly plan unique journeys, connect with
+                          local vendors for exclusive shopping, and contribute to communities
+                          Make your adventure extraordinary with us. 
+                      </p>
+                      <!-- <div class="about_us_button">
+                          Know More
+                      </div> -->
+    </div>
+    <div class="about_us_features">
+      <div class="about_us_features_mini">
+        <h1>Interactive Maps</h1>
+      </div>
+      <div class="about_us_features_mini">
+        <h1>Real Time Notifications</h1>
+      </div>
+      <div class="about_us_features_mini">
+        <h1>Virtual Assistant</h1>
+      </div>
+      <div class="about_us_features_mini">
+        <h1>Feedback And Improvement</h1>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+        <div class="footer-col">
+            <h2 class="logo2">YOJNA</h2>
+            <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt labore quod ipsa eos magnam? Architecto quas magnam mollitia nemo
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3 class="text-office">
+                Developed by
+                <div class="underline"><span></span></div>
+            </h3>
+            <p class="team-name">TekIT</p>
+            <p class="members">Members</p>
+            <p>Shubhamdeep Singh</p>
+
+            <p>Isha Nanda</p>
+            <p>Taranjeet Kaur</p>
+            <p>Sushant Bansal</p>
+        </div>
+        <div class="footer-col">
+            <h3>
+                Useful Links
+                <div class="underline"><span></span></div>
+            </h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>
+                Newsletter
+                <div class="underline"><span></span></div>
+            </h3>
+            <form action="">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Enter Company Email">
+                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+            </form>
+            <h3 class="connect-us">
+              Connect with us
+              <div class="underline"><span></span></div>
+            </h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+    </body>
+</html>
