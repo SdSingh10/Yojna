@@ -1,6 +1,7 @@
 import bodyParser from "body-parser";
 import express from "express";
 import mongoose from "mongoose";
+import fs from "fs";
 
 const port=3300;
 const app= express();
@@ -32,6 +33,9 @@ const User = mongoose.model('AADHAR_INFO', userSchema);
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
+
+const schemes = JSON.parse(fs.readFileSync('Aadhar_data.json'))
+
 app.post('/login', async (req, res) => {
   const { Aadhar_no, Password } = req.body;
   adhar = Aadhar_no;
@@ -50,7 +54,7 @@ app.post('/login', async (req, res) => {
       if (user.Password === Password) {
         console.log("Login successful!");
         // Render index page with user's information
-        res.render("schemes.ejs", { userName: user.Aadhar_no, schemes }); // Assuming Aadhar_no is the username
+        res.render("landing.ejs", { userName: user.Aadhar_no});
       } else {
         console.log("Invalid password!");
         res.send('Invalid password');

@@ -95,11 +95,15 @@ li {
 }
 
 .menu li:hover {
-  background-image:linear-gradient(to right,#179fd9,#044e6e);
+  /* background-image:linear-gradient(to right,#179fd9,#044e6e); */
+  background-color: white;
   border-radius: 5px;
   transition: 0.3s ease;
+  /* color:#179fd9; */
 }
-
+.menu li a:hover{
+  color:#179fd9;
+}
 .menu li {
   padding: 5px 14px;
 }
@@ -328,15 +332,22 @@ input[type=checkbox] {
     gap: 20px 30px;
     margin-top: 30px;
     margin: auto;
+    margin-bottom: 30px;
+}
+.myschemes h1{
+  font-size: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 .s1{grid-area: s1;}
 .s2{grid-area: s2;}
 .s3{grid-area: s3;}
 .s4{grid-area: s4;}
 .myschemes> div {
-    background-color:#ffcccc;
+    /* background-color:floralwhite; */
+    background: transparent;
     text-align:center;
-    padding: 20px 0;
+    padding: 20px;
     font-size: 30px;
     margin:10px 0px 10px 0px;
     border-radius: 15px;
@@ -349,16 +360,19 @@ input[type=checkbox] {
 }
 .myschemes> div h1
 {
-    font-size: 45px;
-    color:#3E2723;
-    font-family:monospace;
+    font-size: 35px;
+    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .myschemes> div p
 {
-    font-size: 35px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
     color: #3E2723;
     font-weight:700;
+    padding: 20px;
+    width: 75%;
+    margin: auto;
 }
 .maps{
     width:100%;
@@ -391,7 +405,7 @@ input[type=checkbox] {
 .about_us_box{
     height: 800px;
     width: 100%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -417,7 +431,7 @@ input[type=checkbox] {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #2f4d5a;
     text-align: center;
-    margin: 10px 0px 20px 0px;
+    margin: 50px 0px 20px 0px;
 }
 .about_us p
 {
@@ -427,6 +441,7 @@ input[type=checkbox] {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 70px;
     color: rgb(50, 49, 49);
+    margin-top: 40px;
 }
 .about_us_button
 {
@@ -464,10 +479,11 @@ input[type=checkbox] {
 .about_us_features> div{
     height: 250px;
     width: 85%;
-    background-color: rgb(103, 103, 230);
+    background-color: rgb(152, 152, 246);
     border-radius: 30px;
     margin: 20px 20px 20px 20px;
-    padding:20px;
+    padding:50px;
+    transition: width 0.8s, height 0.8s, transform 0.8s;
 }
 .about_us_features> div h1
 {
@@ -481,6 +497,10 @@ input[type=checkbox] {
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: #3E2723;
     font-weight:700;
+}
+.about_us_features> div:hover
+{
+    transform: scale(1.05);
 }
 footer{
     background: linear-gradient(to right, #0c041f,#044e6e);

@@ -188,7 +188,7 @@ li {
 /* LOGO */
 .logo {
   font-size: 35px;
-  font-family:'Times New Roman', Times, serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: #f7fae3;
   padding-left: 70px;
 }
@@ -223,7 +223,8 @@ li {
 }
 
 .menu li:hover {
-  background-image:linear-gradient(to right,#179fd9,#044e6e);
+  /* background-image:linear-gradient(to right,#179fd9,#044e6e); */
+  background-color: white;
   border-radius: 5px;
   transition: 0.3s ease;
 }
