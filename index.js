@@ -4,12 +4,23 @@ import mongoose from "mongoose";
 
 const port=3300;
 const app= express();
-// let username="user";
-// let password="user@";
+let adhar="user_";
+let pass="user@";
 mongoose.connect('mongodb://localhost:27017/YOJNA')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+let chatList = ["Hello i am here to help you"]
+const chatResponses = {
+  "What government schemes are available?": "There are various government schemes available such as PM Kisan Yojana, Ayushman Bharat Yojana, PM SVANidhi Yojana, etc.",
+  "Can you give me updates about new yojnas?": "Sure, the government recently launched the Atmanirbhar Bharat Rozgar Yojana to boost employment.",
+  "How do I apply for PM Kisan Yojana?": "You can apply for PM Kisan Yojana online through the official website of PM Kisan or visit your nearest Common Service Centre.",
+  "Tell me about Ayushman Bharat Yojana.": "Ayushman Bharat Yojana provides health insurance coverage to economically vulnerable families. It aims to cover more than 10 crore poor families.",
+  "What is the eligibility for PM SVANidhi Yojana?": "PM SVANidhi Yojana is for street vendors. To be eligible, the vendor should be in possession of a Certificate of Vending, and the vendor's business should be in the urban area as per the 2011 Census.",
+  "Give me details about Atal Pension Yojana.": "Atal Pension Yojana is a pension scheme for the unorganized sector. The age of the subscriber should be between 18 and 40 years. The subscriber receives a fixed minimum pension ranging from Rs. 1000 to Rs. 5000 per month after the age of 60.",
+  "What are the benefits of Pradhan Mantri Awas Yojana?": "Pradhan Mantri Awas Yojana provides affordable housing to urban poor. The benefits include interest subsidy on home loans, assistance for construction, and enhancement of housing stock.",
+  "How can I check the status of my PM Jan Dhan Yojana account?": "You can check the status of your PM Jan Dhan Yojana account by visiting the official website or contacting your bank. You can also use the mobile app or SMS facility provided by the bank.",
+};
 // Create a schema for your user model
 const userSchema = new mongoose.Schema({
   Aadhar_no: String,
@@ -43,8 +54,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 // });
 app.post('/login', async (req, res) => {
   const { Aadhar_no, Password } = req.body;
-  console.log(Aadhar_no)
-  console.log(Password)
+  adhar = Aadhar_no;
+  pass = Password;
   try {
     console.log("Attempting to log in with Aadhar_no:", Aadhar_no);
     
@@ -102,7 +113,11 @@ app.post("/feedback",(req,res)=>{
 
 
 app.get("/",(req,res)=>{
-    res.render("landing.ejs");
+    if (adhar == "user") {
+        res.redirect("/login");
+    } else {
+        res.render("landing.ejs", {chatList: chatList});
+    }
 })
 app.get("/reset",(req,res)=>{
     res.render("setpass.ejs");
@@ -110,7 +125,13 @@ app.get("/reset",(req,res)=>{
 app.get("/profile",(req,res)=>{
     res.render("reportpage.ejs");
 })
-
+app.post("/newMessage", (req, res) => {
+  const msg = req.body.msg;
+  const currResponse = chatResponses[msg] || " I'm sorry, I don't understand that question.";
+  chatList.push(msg)
+  chatList.push(currResponse)
+  res.redirect("/#chatBot")
+})
 
 
 app.listen(port,()=>{

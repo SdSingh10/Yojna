@@ -132,13 +132,19 @@
           </div>
       </div>
   </div>
-  <div class="maps">
+  <div class="maps" id="chatBot">
     <div class="chatBox">
-      <div class="chatMsg">hello this is sample chat message</div>
+      <% if (locals.chatList) { %>
+        <% for (let i=0; i<chatList.length; i++) { %>
+          <div class="chatMsg"><%= chatList[i] %></div>
+        <% } %>
+      <% } %>
     </div>
     <div class="chatInput">
-      <input type="text">
-      <input type="submit">
+      <form action="/newMessage" method="post">
+        <input type="text" name="msg">
+        <input type="submit">
+      </form>
     </div>
   </div>
   <div class="gallery">
