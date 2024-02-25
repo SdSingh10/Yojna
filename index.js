@@ -21,26 +21,6 @@ const User = mongoose.model('AADHAR_INFO', userSchema);
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
-
-// app.post('/login', async (req, res) => {
-//   const { Aadhar_no, Password } = req.body;
-
-//   try {
-//     // Find the user in the database by Aadhar_no
-//     const user = await User.findOne({ Aadhar_no }).exec();
-    
-//     // If user found, check password
-//     if (user && user.Password === Password) {
-//       // Render index page with user's information
-//       res.render("index.ejs", { userName: user.Aadhar_no }); // Assuming Aadhar_no is the username
-//     } else {
-//       res.send('Invalid Aadhar_no or password');
-//     }
-//   } catch (error) {
-//     console.error('Error finding user:', error);
-//     res.send('Error finding user');
-//   }
-// });
 app.post('/login', async (req, res) => {
   const { Aadhar_no, Password } = req.body;
   console.log(Aadhar_no)
@@ -59,7 +39,7 @@ app.post('/login', async (req, res) => {
       if (user.Password === Password) {
         console.log("Login successful!");
         // Render index page with user's information
-        res.render("schemes.ejs", { userName: user.Aadhar_no }); // Assuming Aadhar_no is the username
+        res.render("schemes.ejs", { userName: user.Aadhar_no, schemes }); // Assuming Aadhar_no is the username
       } else {
         console.log("Invalid password!");
         res.send('Invalid password');
